@@ -25,7 +25,18 @@ const nextConfig = {
       },
     ];
   },
-
+  async rewrites() {
+    return [
+      {
+        source: '/ellie',
+        destination: '/about/me/ellie',
+      },
+      {
+        source: '/items/:slug',
+        destination: '/products/:slug',
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
